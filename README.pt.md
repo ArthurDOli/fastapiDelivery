@@ -22,7 +22,7 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
 1.  **Clone o repositório:**
 
     ```bash
-    git clone [https://github.com/ArthurDOli/fastapiDelivery.git](https://github.com/ArthurDOli/fastapiDelivery.git)
+    git clone https://github.com/ArthurDOli/fastapiDelivery.git
     cd fastapiDelivery
     ```
 
