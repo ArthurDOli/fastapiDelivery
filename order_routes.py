@@ -54,10 +54,11 @@ async def adicionar_item_pedido(id_pedido: int, item_pedido_schema: ItemPedidoSc
         raise HTTPException(status_code=401, detail="Você não tem autorização para fazer essa operação")
     item_pedido = ItemPedido(item_pedido_schema.quantidade, item_pedido_schema.sabor, item_pedido_schema.tamanho, item_pedido_schema.preco_unitario, id_pedido)
     session.add(item_pedido)
+    session.flush()
     pedido.calcular_preco()
     session.commit()
     return {
-        'mensage': 'Item criado com sucesso',
+        'mensage': 'Item adicionado com sucesso',
         'item_id': item_pedido.id,
         'preco_pedido': pedido.preco
     }

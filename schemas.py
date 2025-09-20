@@ -26,7 +26,7 @@ class ItemPedidoSchema(BaseModel):
     sabor: str
     tamanho: str
     preco_unitario: float
-    id_pedido: int
+    pedido: int
     class Config:
         from_attributes = True
 
